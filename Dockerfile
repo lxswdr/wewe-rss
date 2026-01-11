@@ -12,7 +12,7 @@ RUN pnpm install
 
 RUN pnpm run -r build
 
-RUN pnpm deploy --filter=server --prod /app-sqlite
+RUN pnpm deploy --legacy --filter=server --prod /app-sqlite
 
 RUN cd /app-sqlite && \
     rm -rf ./prisma && \
